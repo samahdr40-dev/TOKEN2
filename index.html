@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="menu-version" content="2026-04-21 19:37">
+<meta name="menu-version" content="2026-04-21 19:41">
 <title>القائمة الرقمية — OUI POS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -35,9 +35,9 @@
 <div class="cart-drawer" id="cartDrawer"><div class="cart-header"><h3><i class="bi bi-cart3"></i> طلبك</h3><button class="cart-clear-btn" onclick="window._clearCart()"><i class="bi bi-trash3"></i> إفراغ</button></div><div class="cart-items" id="cartItemsList"></div><div class="cart-footer"><div class="cart-total"><span class="cart-total-label">المجموع</span><span class="cart-total-value" id="cartTotal"></span></div><input type="text" class="cart-name-input" id="customerName" placeholder="اسمك (اختياري)" maxlength="60"><button class="whatsapp-order-btn" id="sendOrderBtn" onclick="window._previewOrder()"><i class="bi bi-whatsapp"></i> أرسل الطلب عبر واتساب</button></div></div>
 <div class="order-preview-overlay" id="orderPreview" onclick="if(event.target===this)window._closePreview()"><div class="order-preview-card" id="orderPreviewCard"></div></div>
 
-<footer class="ft"><p>آخر تحديث: 2026-04-21 19:37</p></footer>
+<footer class="ft"><p>آخر تحديث: 2026-04-21 19:41</p></footer>
 <script>
-var P=[],C=[{"id":1,"name":"عام"}],cur='$',dec=2,ac='all',st='',waNum='',cart=[],NL=String.fromCharCode(10);
+var P=[{"id":1,"name":"منتج 1","desc":"","price":15,"cat":"عام","catId":1,"img":"","gallery":[],"tax":0}],C=[{"id":1,"name":"عام"}],cur='$',dec=2,ac='all',st='',waNum='',cart=[],NL=String.fromCharCode(10);
 function e(t){if(!t)return'';return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function fp(n){return parseFloat(n||0).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})}
 function rc(){var h='<button class="cb a" onclick="sc(\'all\')"><span class="cc">'+P.length+'</span> الكل</button>';var uc=P.filter(function(p){return!p.catId});C.forEach(function(c){var n=P.filter(function(p){return p.catId==c.id}).length;if(!n)return;h+='<button class="cb" data-c="'+c.id+'" onclick="sc(\''+c.id+'\')"><span class="cc">'+n+'</span> '+e(c.name)+'</button>'});if(uc.length)h+='<button class="cb" data-c="0" onclick="sc(\'0\')"><span class="cc">'+uc.length+'</span> أخرى</button>';document.getElementById('clist').innerHTML=h}
